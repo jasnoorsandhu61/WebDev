@@ -4,9 +4,112 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Introduction</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .window {
+            width: 100dvw;
+            height: 100dvh;
+            font-family: Arial, sans-serif;
+            background-image: url("src/introBackground.webp");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-self: center;
+            flex-direction: column;
+        }
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+        }
+
+        .title > h1 {
+            font-size: 3rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            margin: 0;
+            text-align: center;
+        }
+
+        .title > img {
+            width: 350px;
+            height: auto;
+            margin-top: 20px;
+        }
+
+        .move {
+            animation: move 5s infinite ease-in-out, rotate 3s infinite ease-in-out;
+            animation-composition: add;
+        }
+        @keyframes move {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-30px); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes rotate {
+            0% { transform: rotate(2.5deg); }
+            50% { transform: rotate(-2.5deg); }
+            100% { transform: rotate(2.5deg); }
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+            gap: 20px;
+        }
+
+        .content > button {
+            width: 200px;
+            height: 80px;
+            font-size: 1.5rem;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            transition: background-color 0.3s, transform 0.3s;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content > button:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            transform: scale(1.05);
+        }
+
+    </style>
 </head>
 <body>
-    
+
+    <div class="window">
+
+        <div class="title">
+            <h1>Wheel of Misfortune</h1>
+            <img class="move" src="src/slotMachineClipart.webp" alt="">
+        </div>
+
+        <div class="content">
+            <button><h1>PLAY</h1></button>
+            <button><h1>INFO</h1></button>
+        </div>
+        
+    </div>
+
 </body>
 </html>
 
@@ -17,3 +120,4 @@
 • Team Members: A list of your team members (last and first names) along with their respective
 project responsibilities."
 -->
+
