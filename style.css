@@ -42,6 +42,19 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
         }
 
+        @media (prefers-color-scheme: dark) {
+            body {
+            --text-color: white;
+            --bg-color: black;
+            }
+            .header {
+            background: linear-gradient(90deg, #5735ff, #1ea7f7);
+            }
+            .window {
+            background: linear-gradient(135deg, #291a2e, #421f53, #21589b);
+            }
+        }
+
         .credit-display {
             font-size: 1.2rem;
             font-weight: bold;
